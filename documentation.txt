@@ -1,0 +1,247 @@
+======================================================================
+📄 ДОКУМЕНТАЦИЯ API
+======================================================================
+
+📍 ЭНДПОИНТ: /api/v1/users
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\app.py
+   📌 Функция: users_handler
+   📌 Строка: 12
+   📌 Методы: GET, POST
+   📌 Пример запроса:
+      GET /api/v1/users
+      POST /api/v1/users
+      Content-Type: application/json
+
+❓ ЭНДПОИНТ: /user/<id>/profile
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\app.py
+   📌 Функция: profile
+   📌 Строка: 22
+   📌 Методы: GET
+   📌 Параметры пути:
+      - id (string)
+   📌 Пример запроса:
+      GET /user/<id>/profile
+
+📍 ЭНДПОИНТ: 
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+   📌 Функция: empty
+   📌 Строка: 6
+   📌 Методы: GET
+   📌 Blueprint: bp (итоговый prefix=(нет))
+   📌 Пример запроса:
+      GET 
+
+📍 ЭНДПОИНТ: noslash
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+   📌 Функция: noslash
+   📌 Строка: 10
+   📌 Методы: GET
+   📌 Blueprint: bp (итоговый prefix=(нет))
+   📌 Пример запроса:
+      GET noslash
+
+📍 ЭНДПОИНТ: /dup
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+   📌 Функция: dup1
+   📌 Строка: 14
+   📌 Методы: GET
+   📌 Blueprint: bp (итоговый prefix=(нет))
+   📌 Пример запроса:
+      GET /dup
+
+📍 ЭНДПОИНТ: /dup
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+   📌 Функция: dup2
+   📌 Строка: 18
+   📌 Методы: GET
+   📌 Blueprint: bp (итоговый prefix=(нет))
+   📌 Пример запроса:
+      GET /dup
+
+❓ ЭНДПОИНТ: /items/<thing>
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+   📌 Функция: get_thing
+   📌 Строка: 22
+   📌 Методы: GET
+   📌 Blueprint: bp (итоговый prefix=(нет))
+   📌 Параметры пути:
+      - thing (string)
+   📌 Пример запроса:
+      GET /items/<thing>
+
+❓ ЭНДПОИНТ: /custom
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\api\v2\custom_deco.py
+   📌 Функция: custom_endpoint
+   📌 Строка: 10
+   📌 Методы: GET
+   📌 Декоратор: @my_route (самодельный, распознан)
+   📌 Пример запроса:
+      GET /custom
+
+❓ ЭНДПОИНТ: /another
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\api\v2\custom_deco.py
+   📌 Функция: another_one
+   📌 Строка: 14
+   📌 Методы: GET
+   📌 Декоратор: @my_route (самодельный, распознан)
+   📌 Пример запроса:
+      GET /another
+
+⚠️  НЕ РАЗОБРАН: projects\krivoy_proekt\krivoy_proekt\src\broken_syntax.py
+     Синтаксическая ошибка строка 5: invalid syntax
+
+📍 ЭНДПОИНТ: /search
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\src\handlers\search_stuff.py
+   📌 Функция: search
+   📌 Строка: 6
+   📌 Методы: GET
+   📌 Blueprint: search_bp (итоговый prefix=(нет))
+   📌 Параметры запроса:
+      - q (request.args.get)
+      - page (request.args[...])
+      - limit (request.values.get)
+      - sort (request.form.get)
+   📌 Пример запроса:
+      GET /search
+
+📍 ЭНДПОИНТ: /legacy
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\src\handlers\search_stuff.py
+   📌 Функция: legacy
+   📌 Строка: 15
+   📌 Методы: GET
+   📌 Blueprint: search_bp (итоговый prefix=(нет))
+   📌 Пример запроса:
+      GET /legacy
+
+📍 ЭНДПОИНТ: /orders
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\src\stuff\orders.py
+   📌 Функция: create_order
+   📌 Строка: 8
+   📌 Методы: GET
+   📌 Пример запроса:
+      GET /orders
+
+📍 ЭНДПОИНТ: /config
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\src\stuff\orders.py
+   📌 Функция: config_handler
+   📌 Строка: 17
+   📌 Методы: GET
+   📌 Пример запроса:
+      GET /config
+
+❓ ЭНДПОИНТ: (URL через api.add_resource)
+   📌 Файл: projects\krivoy_proekt\krivoy_proekt\╤Б╤В╨░╤А╨░╤П ╨▓╨╡╤А╤Б╨╕╤П\legacy_api.py
+   📌 Класс: BookApi
+   📌 Строка: 3
+   📌 HTTP методы: GET, POST
+
+
+======================================================================
+📊 МЕТРИКА ПОКРЫТИЯ
+======================================================================
+Распознано уверенно (N):        9  (45.0%)
+Помечено как неуверенные (M):   5  (25.0%)
+Оценочно пропущено (K):         6  (30.0%)
+──────────────────────────────────────────────────
+Итого оценочно:                 20 (100%)
+Точность парсера (N / total):   45.0%
+
+Заявленное ожидаемое: 19
+Фактически найдено:   14 (73.7%)
+
+======================================================================
+🟡 ПОДОЗРИТЕЛЬНЫЕ МЕСТА (M — неуверенные)
+======================================================================
+[1] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\dynamic_routes.py
+    📄 Строка: 6
+    ❓ add_url_rule в цикле
+    📎 Контекст: URL: <expression>
+
+[2] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\dynamic_routes.py
+    📄 Строка: 11
+    ❓ add_url_rule в цикле
+    📎 Контекст: URL: <expression>
+
+[3] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v2\custom_deco.py
+    📄 Строка: 10
+    ❓ Самодельный декоратор @my_route — распознан как эндпоинт
+    📎 Контекст: функция custom_endpoint
+
+[4] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v2\custom_deco.py
+    📄 Строка: 14
+    ❓ Самодельный декоратор @my_route — распознан как эндпоинт
+    📎 Контекст: функция another_one
+
+======================================================================
+👆 Проверьте эти места вручную
+======================================================================
+
+======================================================================
+🔴 ОЦЕНОЧНО ПРОПУЩЕННЫЕ (K)
+======================================================================
+[1] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\dynamic_routes.py
+    📄 Строка: 6
+    ❗ add_url_rule в цикле
+    📊 Оценочно эндпоинтов: ~3
+
+[2] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\dynamic_routes.py
+    📄 Строка: 11
+    ❗ add_url_rule в цикле
+    📊 Оценочно эндпоинтов: ~3
+
+======================================================================
+👆 Эти эндпоинты парсер не смог распознать автоматически
+======================================================================
+
+======================================================================
+⚠️  ФИЛЬТР НЕРАСПОЗНАННЫХ ЭЛЕМЕНТОВ
+======================================================================
+Найдено проблем: 9
+
+[1] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\app.py
+    📄 Строка: 22
+    ❗ Параметр пути 'id' без типа
+    📎 Контекст: функция profile, URL: /user/<id>/profile
+
+[2] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\app.py
+    📄 Строка: 22
+    ❗ URL содержит нераскрытые переменные: /user/<id>/profile
+    📎 Контекст: функция profile
+
+[3] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+    📄 Строка: 5
+    ❗ Пустой URL
+    📎 Контекст: функция empty
+
+[4] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+    📄 Строка: 9
+    ❗ URL 'noslash' должен начинаться с '/'
+    📎 Контекст: функция noslash
+
+[5] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+    📄 Строка: 17
+    ❗ URL '/dup' уже определён в projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+    📎 Контекст: функция dup2
+
+[6] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+    📄 Строка: 22
+    ❗ Параметр пути 'thing' без типа
+    📎 Контекст: функция get_thing, URL: /items/<thing>
+
+[7] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\api\v1\broken.py
+    📄 Строка: 22
+    ❗ URL содержит нераскрытые переменные: /items/<thing>
+    📎 Контекст: функция get_thing
+
+[8] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\src\broken_syntax.py
+    📄 Строка: 5
+    ❗ Синтаксическая ошибка: invalid syntax
+
+[9] 📄 Файл: projects\krivoy_proekt\krivoy_proekt\╤Б╤В╨░╤А╨░╤П ╨▓╨╡╤А╤Б╨╕╤П\legacy_api.py
+    📄 Строка: 3
+    ❗ Класс Resource без URL
+    📎 Контекст: класс BookApi
+
+======================================================================
+👆 Проверьте эти места в исходных файлах вручную
+======================================================================
