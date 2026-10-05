@@ -1,0 +1,31 @@
+# Виртуальное окружение
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# PyCharm
+.idea/
+.vscode/
+
+# Результаты
+documentation.txt
+
+# Лишние файлы
+.flake
+FastAPIcode.py
+flask8_mcoding.py
+project1_crud_flask.py
+project2_blueprint_api.py
+project3_flask_restful.py
+project4_flask_restx.py
+Pydantic.py
+с ошибкой.py
+
+# OS
+.DS_Store
+Thumbs.db
